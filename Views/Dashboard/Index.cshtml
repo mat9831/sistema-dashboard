@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<h1>Dashboard</h1>
+
+<div style="display:flex; gap:20px">
+
+    <div style="background:#eee; padding:20px; border-radius:8px">
+        <h3>Total de tarefas</h3>
+        <h2>@ViewBag.Total</h2>
+    </div>
+
+    <div style="background:#fff3cd; padding:20px; border-radius:8px">
+        <h3>Pendentes</h3>
+        <h2>@ViewBag.Pendentes</h2>
+    </div>
+
+    <div style="background:#d4edda; padding:20px; border-radius:8px">
+        <h3>Concluídas</h3>
+        <h2>@ViewBag.Concluidas</h2>
+    </div>
+
+</div>
+<div class="container d-flex justify-content-center align-items-center" style="height:30vh;">
+
+    <div class="card shadow text-center" style="width: 500px;">
+
+        <div class="card-body">
+
+            <h1 class="mb-3">Acessar Tarefas</h1>
+
+            <hr />
+
+            <div class="d-grid gap-2">
+
+                <a href="/Tarefas/Index" class="btn btn-primary btn-lg">
+                    Minhas Tarefas
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

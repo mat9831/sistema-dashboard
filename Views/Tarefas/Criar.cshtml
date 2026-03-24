@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "criar tafera";
+}
+@model Tarefa
+
+<h2>Nova tarefa</h2>
+
+<form method="post">
+
+    <label>Título</label>
+    <input asp-for="Titulo" class="form-control" />
+
+    <label>Descrição</label>
+    <textarea asp-for="Descricao" class="form-control"></textarea>
+
+    <br />
+
+    <button type="submit" class="btn btn-primary">
+        Salvar
+    </button>
+    
+
+</form>

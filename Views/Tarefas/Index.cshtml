@@ -1,0 +1,46 @@
+﻿@model List<Tarefa>
+@{
+    ViewData["Title"] = "Tarefas";
+}
+
+<h2>Minhas Tarefas</h2>
+
+<div class="d-grid gap-2 mb-3">
+    <a href="/Tarefas/Criar" class="btn btn-primary btn-lg">
+        Criar tarefa
+    </a>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Título</th>
+            <th>Descrição</th>
+            <th>Status</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var tarefa in Model)
+        {
+            <tr>
+                <td>@tarefa.Titulo</td>
+                <td>@tarefa.Descricao</td>
+                <td>@tarefa.Status</td>
+                <td>
+                    <a asp-action="Concluir" asp-route-id="@tarefa.Id">Concluir</a> |
+                    <a asp-action="Editar" asp-route-id="@tarefa.Id">Editar</a> |
+                    <a asp-action="Excluir" asp-route-id="@tarefa.Id">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<br />
+
+<div style="max-width:500px; margin:auto;">
+    <a href="/Dashboard/Index" class="btn btn-primary w-100">
+        Voltar
+    </a>
+</div>
